@@ -1,0 +1,24 @@
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+@mixin tablet{
+    @media(max-width:760px){
+        @content;
+    }
+}
+
+@mixin tabletLogo{
+    @media(max-width:750px){
+        @content;
+    }
+}
+
+@mixin input{
+    @media(max-width:368px){
+        @content;
+    }
+}

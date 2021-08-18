@@ -1,0 +1,231 @@
+* {
+  border: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.navbar .navbarLogo, .navbar .navbarMenu, .navbar .navbarMenu .navbarMenuLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar {
+  background: #F7F7F7;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.5rem calc((100vw - 1200px) / 2);
+  z-index: 10;
+  position: relative;
+}
+
+.navbar .navbarLogo {
+  color: #222121;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  margin-left: 24px;
+}
+
+.navbar .navbarBars {
+  opacity: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar .navbarBars {
+    color: #222121;
+    opacity: 1;
+    position: absolute;
+    top: 22px;
+    right: 20px;
+    font-size: 2rem;
+  }
+}
+
+.navbar .navbarMenu {
+  list-style: none;
+  text-align: center;
+  margin-right: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar .navbarMenu {
+    display: none;
+  }
+}
+
+.navbar .navbarMenu .navbarMenuLinks {
+  color: #222121;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  padding: 0 1rem;
+}
+
+.navbar .navbarMenu .navbarMenuLinks:hover {
+  color: #00CC66;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.navbar #button {
+  padding: 12px 24px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  background: #00CC66;
+  margin-left: 16px;
+  color: #F7F7F7;
+}
+
+.navbar #button:hover {
+  background: #FB4B4C;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+h1 {
+  color: #20C997;
+}
+
+.hero {
+  background-color: #F7F7F7;
+}
+
+.hero .heroContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  margin: 0 auto;
+  height: 83vh;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  padding-right: 24px;
+  padding-left: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .hero .heroContainer {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    height: 100%;
+  }
+}
+
+.hero .heroContainer .heroContainerLeft {
+  width: 100%;
+  line-height: 1.2;
+}
+
+@media screen and (max-width: 768px) {
+  .hero .heroContainer .heroContainerLeft {
+    padding: 5rem 0;
+  }
+}
+
+@media screen and (max-width: 288px) {
+  .hero .heroContainer .heroContainerLeft {
+    line-height: 1.5;
+  }
+}
+
+.hero .heroContainer .heroContainerLeft h1 {
+  font-size: 4rem;
+  color: #00CC66;
+}
+
+@media screen and (max-width: 288px) {
+  .hero .heroContainer .heroContainerLeft h1 {
+    font-size: 1.5rem;
+  }
+}
+
+.hero .heroContainer .heroContainerLeft h2 {
+  font-size: 4rem;
+  color: #222121;
+}
+
+@media screen and (max-width: 288px) {
+  .hero .heroContainer .heroContainerLeft h2 {
+    font-size: 2rem;
+  }
+}
+
+.hero .heroContainer .heroContainerLeft p {
+  font-size: 2rem;
+  color: #222121;
+  margin-top: 1rem;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 288px) {
+  .hero .heroContainer .heroContainerLeft p {
+    font-size: 1.2rem;
+  }
+}
+
+.hero .heroContainer .heroContainerLeft .heroContainerBtn {
+  font-size: 1rem;
+  background-color: #00CC66;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 4px;
+  color: #F7F7F7;
+  margin-top: 2rem;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  outline: none;
+}
+
+.hero .heroContainer .heroContainerLeft .heroContainerBtn a {
+  position: relative;
+  z-index: 2;
+  color: #F7F7F7;
+  text-decoration: none;
+}
+
+.hero .heroContainer .heroContainerLeft .heroContainerBtn:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #FB4B4C;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border-radius: 4px;
+}
+
+.hero .heroContainer .heroContainerLeft .heroContainerBtn:hover:after {
+  width: 100%;
+}
+
+.hero .heroContainer .heroContainerRight {
+  text-align: center;
+}
+
+.hero .heroContainer .heroContainerRight img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+/*# sourceMappingURL=style.css.map */

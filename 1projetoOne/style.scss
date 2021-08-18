@@ -1,0 +1,149 @@
+@import './sass/variables';
+@import './sass/mixins';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $bg-color;
+    color: $text-color;
+    font-family: "Josefin Sans";
+}
+
+a{
+    color: $text-color;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+ul{
+    list-style: none;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    @include container;// é nome do mixin e nao para colocar o nome do arquivo
+    @include mobile{//parte da responsividade
+        padding: 1.1rem;
+    }
+    .header-brand{
+        color: $primary-color;
+        font-size: 3rem;
+    }
+    .header-navbar{
+        ul{
+            height: 100%;
+            @include flex-center;
+            @include mobile{
+                display: none;
+            }
+            li{
+                margin: 0 1rem;
+                text-transform: uppercase;
+                font-size: 0.8rem;
+                .active{
+                    color: $secondary-color;
+                }
+                a:hover{
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+    .header-social-media{
+        ul{
+            @include flex-center;
+            height: 100%;
+            @include mobile{
+                display: none;
+            }
+            li{
+                margin: 0 1rem;
+                a:hover{
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}
+
+.gallery{
+    @include container;
+    @include flex-center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    @include mobile{
+        flex-direction: column;
+    }
+    .gallery-card{
+        width: 31%;
+        height: 400px;
+        margin-bottom: 4%;
+        @include flex-center;
+        flex-direction: column;
+        color: $primary-color;
+        @include mobile{
+            width: 90%;
+            margin-bottom: 6%;
+        }
+
+        .gallery-card-title{
+            font-size: 2rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+        }
+        .gallery-card-btn{
+            padding: 0.6rem .2rem;
+            border: 2px solid $primary-color;
+            color: $primary-color;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .gallery-card-btn:hover{
+            background-color: $primary-color;
+            color: $bg-color;
+        }
+    }
+    #card-1{
+        @include bg-img('liongoo.jpg');
+    }
+    #card-2{
+        @include bg-img('arquiteturaaa.jpg');
+    }
+    #card-3{
+        @include bg-img('city.jpg');
+    }
+    #card-4{
+        @include bg-img('decoratioon.jpg');
+    }
+    #card-5{
+        @include bg-img('sportss.jpg');
+    }
+    #card-6{
+        @include bg-img('naturee.jpg');
+    }
+    #card-7{
+        @include bg-img('paisagem.jpg');
+    }
+    #card-8{
+        @include bg-img('pessoaas.jpg');
+    }
+    #card-9{
+        @include bg-img('refeicao.jpg');
+    }
+}
+
+footer{
+    text-align: center;
+    padding-bottom: 2rem;
+    span{
+        font-weight: bold;
+        color: $secondary-color;
+    }
+}

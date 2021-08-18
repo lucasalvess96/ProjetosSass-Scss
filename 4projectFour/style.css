@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto, Arial, Helvetica, sans-serif';
+}
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.75))), url("https://images.unsplash.com/photo-1554995207-c18c203602cb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHJvb21zfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60");
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("https://images.unsplash.com/photo-1554995207-c18c203602cb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHJvb21zfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60");
+  background-size: cover;
+  background-position: center;
+}
+
+.banner .navbar {
+  width: 85%;
+  padding: 35px 0;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.banner .navbar .logo {
+  color: #FFF;
+}
+
+.banner .navbar #menuHamburgguerInput {
+  display: none;
+}
+
+.banner .navbar .menuHamburgguerLabel {
+  color: white;
+  font-size: 1.8rem;
+  line-height: 5rem;
+  margin-right: 2.5rem;
+  float: right;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 780px) {
+  .banner .navbar .menuHeader .container h2 {
+    margin: 0 35px;
+  }
+}
+
+@media (max-width: 780px) {
+  .banner .navbar {
+    padding: 0;
+  }
+  .banner .navbar .menuHamburgguerLabel {
+    display: block;
+  }
+  .banner .navbar ul {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.75)));
+    background: linear-gradient(rgba(0, 0, 0, 0.75));
+    top: 5rem;
+    left: -100%;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    text-align: center;
+    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .banner .navbar nav ul li {
+    display: block;
+    margin: 2.1rem;
+  }
+  .banner .navbar nav ul li a {
+    font-size: 1.25rem;
+    line-height: 1.8rem;
+    text-decoration: none;
+  }
+  .banner .navbar a:hover {
+    background: none;
+    color: #009688;
+  }
+  .banner .navbar .menuHeader .navigationMenu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .banner .navbar #menuHamburgguerInput:checked ~ ul {
+    left: 0;
+  }
+}
+
+.banner .navbar ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+
+.banner .navbar ul li a {
+  text-decoration: none;
+  color: #FFF;
+  text-transform: uppercase;
+}
+
+.banner .navbar ul li::after {
+  content: '';
+  height: 3px;
+  width: 0;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background: #009688;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.banner .navbar ul li:hover::after {
+  width: 100%;
+}
+
+.banner .content {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  text-align: center;
+  color: #FFF;
+}
+
+.banner .content .btn {
+  width: 200px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px 10px;
+  border-radius: 25px;
+  font-weight: bold;
+  border: 2px solid #009688;
+  background: transparent;
+  color: #FFF;
+  cursor: pointer;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner .content span {
+  background: #009688;
+  height: 100%;
+  width: 0;
+  border-radius: 25%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.banner .content .btn:hover span {
+  width: 100%;
+}
+
+.banner .content .btn:hover {
+  border: none;
+}
+/*# sourceMappingURL=style.css.map */
